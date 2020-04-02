@@ -1,0 +1,69 @@
+import React from 'react';
+import { Text, View, StyleSheet, TouchableHighlight,SafeAreaView,Image,TextInput ,
+    ImageBackground,Dimensions,KeyboardAvoidingView,ScrollView,TouchableOpacity} from 'react-native';
+import { Root,Icon ,Drawer, Item ,Header,Body,Card,Left,Right,Button,Picker,Input, Toast,} from 'native-base';
+import { Platform } from 'react-native';
+
+class Post extends React.Component {
+    static navigationOptions={
+        header:null,
+    } 
+    constructor(props) {
+        super(props);
+        this.state = {
+         
+        }
+    }
+
+    render() {
+
+      const {navigate}=this.props.navigation;
+      return (
+        <View  style={{flex:1,backgroundColor:'#f5f6fb'}}>
+    <ScrollView style={{ }}>
+
+<View style={{flexDirection:'row',marginTop:30,marginLeft:20}}>
+  <TouchableOpacity onPress={()=>navigate('Categories')}>
+    <Image source={require('../images/back.png')} style={{marginTop:10,marginRight:10,width:30,height:20}}/>
+  </TouchableOpacity>
+<Text style={{fontSize:30,fontWeight:'bold'}}>Home</Text>
+</View>
+
+<View style={{flexDirection:'row',flexWrap:'wrap',marginTop:20}}>
+
+
+{/* POST VIEW` */}
+<View style={{width:'40%',marginHorizontal:'5%',marginBottom:20,justifyContent:'center',}}>
+<TouchableOpacity onPress={()=>navigate('PostDetail')}>
+  <View>
+<Image source={require('../images/room.jpg')} style={{width:'100%',height:120,borderRadius:10}}/>
+<Image source={require('../images/uk.png')} style={{width:20,height:20,borderRadius:2,position:'absolute',bottom:10,right:10}}/>
+  </View>
+  </TouchableOpacity>
+<Text style={{textAlign:'center',width:'90%',marginLeft:'5%',marginTop:10}}>@palace Kingster</Text>
+</View>
+
+{/* POST VIEW` */}
+<View style={{width:'40%',marginHorizontal:'5%',marginBottom:20,justifyContent:'center',}}>
+<TouchableOpacity onPress={()=>navigate('PostDetail')}>
+  <View>
+<Image source={require('../images/room.jpg')} style={{width:'100%',height:120,borderRadius:10}}/>
+<Image source={require('../images/uk.png')} style={{width:20,height:20,borderRadius:2,position:'absolute',bottom:10,right:10}}/>
+  </View>
+  </TouchableOpacity>
+<Text style={{textAlign:'center',width:'90%',marginLeft:'5%',marginTop:10}}>@palace Kingster</Text>
+</View>
+
+
+
+</View>
+    </ScrollView>
+</View>
+);
+}
+}
+
+
+
+            
+export default Post;
