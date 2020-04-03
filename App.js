@@ -30,7 +30,7 @@ import Main from './Main'
 
 
 
-const App: () => React$Node = () => {
+const App = () => {
   return (
     <Main />
   );
