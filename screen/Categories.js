@@ -33,7 +33,7 @@ class Categories extends React.Component {
             {/* HOME CATOGORY */}
             <View style={{ borderRadius: 20, backgroundColor: '#FFFFFF', height: 200, width: '40%', marginHorizontal: '5%', marginBottom: 20, justifyContent: 'center', flexDirection: 'row' }}>
               <View style={{ justifyContent: 'center' }}>
-                <TouchableOpacity onPress={() => navigate('Post', { category: 'home' })}>
+                <TouchableOpacity onPress={() => navigate('Post', { category: 'home', categoryName : 'Home' })}>
                   <Image source={require('../images/home.png')} style={{ width: 80, height: 80 }} />
                   <Text style={{ textAlign: 'center', marginTop: 20, fontWeight: 'bold' }}>Home</Text>
                 </TouchableOpacity>
@@ -43,7 +43,7 @@ class Categories extends React.Component {
             {/* HOME CATOGORY */}
             <View style={{ borderRadius: 20, backgroundColor: '#FFFFFF', height: 200, width: '40%', marginHorizontal: '5%', marginBottom: 20, justifyContent: 'center', flexDirection: 'row' }}>
               <View style={{ justifyContent: 'center' }}>
-                <TouchableOpacity onPress={() => navigate('Post', { category: 'tech' })}>
+                <TouchableOpacity onPress={() => navigate('Post', { category: 'tech', categoryName: 'Tech' })}>
                   <Image source={require('../images/technical-support.png')} style={{ width: 80, height: 80 }} />
                   <Text style={{ textAlign: 'center', marginTop: 20, fontWeight: 'bold' }}>Tech</Text>
                 </TouchableOpacity>
@@ -53,7 +53,7 @@ class Categories extends React.Component {
             {/* HOME CATOGORY */}
             <View style={{ borderRadius: 20, backgroundColor: '#FFFFFF', height: 200, width: '40%', marginHorizontal: '5%', marginBottom: 20, justifyContent: 'center', flexDirection: 'row' }}>
               <View style={{ justifyContent: 'center' }}>
-                <TouchableOpacity onPress={() => navigate('Post', { category: 'men_jewels' })}>
+                <TouchableOpacity onPress={() => navigate('Post', { category: 'men_jewels', categoryName: 'Men Jewels' })}>
                   <Image source={require('../images/bracelet.png')} style={{ width: 80, height: 80 }} />
                   <Text style={{ textAlign: 'center', marginTop: 20, fontWeight: 'bold' }}>Men Jewels</Text>
                 </TouchableOpacity>
@@ -63,7 +63,7 @@ class Categories extends React.Component {
             {/* HOME CATOGORY */}
             <View style={{ borderRadius: 20, backgroundColor: '#FFFFFF', height: 200, width: '40%', marginHorizontal: '5%', marginBottom: 20, justifyContent: 'center', flexDirection: 'row' }}>
               <View style={{ justifyContent: 'center' }}>
-                <TouchableOpacity onPress={() => navigate('Post', { category: 'women_jewels' })}>
+                <TouchableOpacity onPress={() => navigate('Post', { category: 'women_jewels', categoryName: 'Women Jewels' })}>
                   <Image source={require('../images/necklace.png')} style={{ width: 80, height: 80 }} />
                   <Text style={{ textAlign: 'center', marginTop: 20, fontWeight: 'bold' }}>Women Jewels</Text>
                 </TouchableOpacity>
@@ -74,7 +74,7 @@ class Categories extends React.Component {
             {/* HOME CATOGORY */}
             <View style={{ borderRadius: 20, backgroundColor: '#FFFFFF', height: 200, width: '40%', marginHorizontal: '5%', marginBottom: 20, justifyContent: 'center', flexDirection: 'row' }}>
               <View style={{ justifyContent: 'center' }}>
-                <TouchableOpacity onPress={() => navigate('Post', { category: 'men_in_lead' })}>
+                <TouchableOpacity onPress={() => navigate('Post', { category: 'men_in_lead', categoryName: 'Men in lead' })}>
                   <Image source={require('../images/man.png')} style={{ width: 80, height: 80 }} />
                   <Text style={{ textAlign: 'center', marginTop: 20, fontWeight: 'bold' }}>Men in lead</Text>
                 </TouchableOpacity>
@@ -84,7 +84,7 @@ class Categories extends React.Component {
             {/* HOME CATOGORY */}
             <View style={{ borderRadius: 20, backgroundColor: '#FFFFFF', height: 200, width: '40%', marginHorizontal: '5%', marginBottom: 20, justifyContent: 'center', flexDirection: 'row' }}>
               <View style={{ justifyContent: 'center' }}>
-                <TouchableOpacity onPress={() => navigate('Post', { category: 'women_in_lead' })}>
+                <TouchableOpacity onPress={() => navigate('Post', { category: 'women_in_lead', categoryName: 'Women in lead' })}>
                   <Image source={require('../images/woman.png')} style={{ width: 80, height: 80 }} />
                   <Text style={{ textAlign: 'center', marginTop: 20, fontWeight: 'bold' }}>Women in lead</Text>
                 </TouchableOpacity>

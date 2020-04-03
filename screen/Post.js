@@ -22,7 +22,7 @@ class Post extends React.Component {
   componentDidMount() {
     let category = this.props.route.params.category;
     let posts = []
-    firestore().collection('post').where('category','==',category).get().then(async snapshot => {
+    firestore().collection('post').where('category', '==', category).get().then(async snapshot => {
       await snapshot.forEach((doc) => {
         posts.push(doc.data())
       })
@@ -31,7 +31,7 @@ class Post extends React.Component {
     // console.log(snapshot)
   }
   render() {
-
+    let categoryName = this.props.route.params.categoryName;
     const { navigate } = this.props.navigation;
     return (
       <View style={{ flex: 1, backgroundColor: '#f5f6fb' }}>
@@ -41,12 +41,14 @@ class Post extends React.Component {
             <TouchableOpacity onPress={() => navigate('Categories')}>
               <Image source={require('../images/back.png')} style={{ marginTop: 10, marginRight: 10, width: 30, height: 20 }} />
             </TouchableOpacity>
-            <Text style={{ fontSize: 30, fontWeight: 'bold' }}>Home</Text>
+            <Text style={{ fontSize: 30, fontWeight: 'bold' }}>{categoryName}</Text>
           </View>
 
-          <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 20 }}>
+          <View style={{ flex: 1, marginTop: 20 }}>
 
             <FlatList
+              numColumns={2}
+              style={{ flex: 1, }}
               data={this.state.posts}
               renderItem={({ item, index }) => {
                 const { postImages, flagImage } = item;
