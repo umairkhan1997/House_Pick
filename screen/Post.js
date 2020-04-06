@@ -60,7 +60,7 @@ class Post extends React.Component {
                         <Image source={{ uri: flagImage }} style={{ width: 20, height: 20, borderRadius: 2, position: 'absolute', bottom: 10, right: 10 }} />
                       </View>
                     </TouchableOpacity>
-                    <Text style={{ textAlign: 'center', width: '90%', marginLeft: '5%', marginTop: 10 }}>@palace Kingster</Text>
+                <Text style={{ textAlign: 'center', width: '90%', marginLeft: '5%', marginTop: 10 }}>{item.postName}</Text>
                   </View>
                 )
               }}
