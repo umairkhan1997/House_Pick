@@ -35,7 +35,7 @@ class Post extends React.Component {
       <View style={{ flex: 1, backgroundColor: '#f5f6fb' }}>
         {this.state.postData ? <ScrollView style={{}}>
 
-          <View>
+          <View style={{marginTop:Platform.OS==='ios'?30:0}}>
             <TouchableOpacity onPress={() => navigate('Post')} style={{ position: 'absolute', top: 10, left: 10, zIndex: 2 }}>
               <Image source={require('../images/back.png')} style={{ width: 30, height: 20, }} />
             </TouchableOpacity>
